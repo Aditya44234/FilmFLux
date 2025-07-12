@@ -1,0 +1,55 @@
+
+import React, { useState } from 'react'
+
+const onfavClick=()=>{
+    alert("clicked")
+}
+
+
+const MovieCard = ({movie}) => {
+  const [imageError, setImageError] = useState(false)
+
+  const handleImageError = () => {
+    setImageError(true)
+  }
+
+  return (
+    <div className='movie-card' >
+        {/* Movie poster with  like button on it */}
+        <div className="movie-poster">
+            {!imageError ? (
+              <img 
+                src={movie.url} 
+                alt={`${movie.title} poster`} 
+                onError={handleImageError}
+                loading="lazy"
+              />
+            ) : (
+              <div className="movie-placeholder">
+                <span className="placeholder-icon">🎬</span>
+                <p className="placeholder-text">{movie.title}</p>
+              </div>
+            )}
+            <div className="movie-overlay">
+                <button type="button" className='fav-btn' onClick={onfavClick}>
+                    ❤️
+                </button>
+            </div>
+        </div>
+
+        {/* Movie specific info below movie card */}
+
+        <div className="movie-info">
+
+            <h1>{movie.title}</h1>
+            <p>{movie.release_date}</p>
+
+        </div>
+
+
+      
+    </div>
+  )
+}
+
+export default MovieCard
