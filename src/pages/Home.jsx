@@ -3,7 +3,7 @@ import MovieCard from '../components/MovieCard';
 
 const Home = () => {
   const movies = [
-    {id: 1, title: "Venom", release_date: "2018", url: "https://image.tmdb.org/t/p/w500/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg"},
+    {id: 1, title: "Venom: Let There Be Carnage", release_date: "2021", url: "https://image.tmdb.org/t/p/w500/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg"},
     {id: 2, title: "Ex Machina", release_date: "2014", url: "/ExMachina.png"},
     {id: 3, title: "The Avengers", release_date: "2012", url: "https://image.tmdb.org/t/p/w500/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg"},
     {id: 4, title: "Avengers: Endgame", release_date: "2019", url: "https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg"},
@@ -15,7 +15,7 @@ const Home = () => {
     {id: 10, title: "Oppenheimer", release_date: "2023", url: "https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"},
     {id: 11, title: "Mission: Impossible 7", release_date: "2023", url: "https://image.tmdb.org/t/p/w500/NNxYkU70HPurnNCSiCjYAmacwm.jpg"},
     {id: 12, title: "Guardians of the Galaxy 3", release_date: "2023", url: "https://image.tmdb.org/t/p/w500/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg"},
-    {id: 13, title: "Deadpool 3", release_date: "2024", url: "https://image.tmdb.org/t/p/w500/1X4h40fcB4WWWIBdEWO7DoxVv9R.jpg"},
+    {id: 13, title: "Deadpool", release_date: "2016", url: "https://image.tmdb.org/t/p/w500/inVq3FRqcYIRl2la8iZikYYxFNR.jpg"},
     {id: 14, title: "Ant-Man 3", release_date: "2023", url: "https://image.tmdb.org/t/p/w500/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg"},
     {id: 15, title: "Shazam 2", release_date: "2023", url: "https://image.tmdb.org/t/p/w500/A3ZbZsmsvNGdprRi2lKgGEeVLEH.jpg"},
     {id: 16, title: "The Super Mario Bros", release_date: "2023", url: "https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg"},
@@ -70,12 +70,12 @@ const Home = () => {
       <div className="movies-grid">
         {movies.map(
           (movie)=>
-            /*
+          
           movie.title.toLowerCase().startsWith(searchQuery) &&
           (<MovieCard key={movie.id} movie={movie} />)
-          */
+          
 
-            <MovieCard key={movie.id} movie={movie} />
+            // <MovieCard key={movie.id} movie={movie} />
       
         )}
       </div>

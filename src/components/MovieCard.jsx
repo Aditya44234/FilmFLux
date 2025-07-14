@@ -32,7 +32,7 @@ const MovieCard = ({movie}) => {
             )}
             <div className="movie-overlay">
                 <button type="button" className='fav-btn' onClick={onfavClick}>
-                    ❤️
+                    <i className="fa-solid fa-heart" style={{color: "red"}}></i>
                 </button>
             </div>
         </div>
